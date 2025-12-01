@@ -8,9 +8,8 @@ let scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 
 
-/**
- * Mobile Menu Toggle and Link Close Functionality
- */
+// Mobile Menu Toggle and Link Close Functionality
+ 
 menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
@@ -26,9 +25,8 @@ navLinks.forEach(link => {
 });
 
 
-/**
- * Contact Form Validation
- */
+// Contact Form Validation
+
 contactForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -67,9 +65,8 @@ contactForm.addEventListener('submit', function(event) {
 });
 
 
-/**
- * Scroll to Top Button
- */
+// Scroll to Top Button
+ 
 window.onscroll = () => {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         scrollToTopBtn.style.display = "flex";
@@ -79,15 +76,11 @@ window.onscroll = () => {
 }
 
 
-/**
- * Download CV 
- */
-// Trigger CV download
+// Download CV 
 downloadCvBtn.addEventListener('click', () => {
     const link = document.createElement('a');
-    // Simple comment: File path for the CV
-    link.href = 'Hagar_Samy_CV.pdf'; 
-    link.download = 'Hagar_Samy_CV.pdf';
+    link.href = './Hagar-Samy-Frontend-Dev-CV.pdf'; 
+    link.download = 'Hagar-Samy-Frontend-Dev-CV.pdf';
     
     document.body.appendChild(link);
     link.click();
