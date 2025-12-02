@@ -216,14 +216,9 @@ section {
 }
 .about-img img {
 	width: 32vw;
-	border-radius: 50%;
-	box-shadow: 0 0 1.5625rem var(--main-color); 
-	transition: 0.3s ease-in-out;
+	animation: floatImage 4s ease-in-out infinite;
 }
-.about-img img:hover {
-	box-shadow: 0 0 1.5625rem var(--main-color), 0 0 3.125rem var(--main-color),
-		0 0 6.25rem var(--main-color); 
-}
+
 .about-content h2 {
 	font-size: var(--font-headings); 
 	text-align: left;
@@ -361,8 +356,9 @@ section {
 }
 .contact form {
 	display: flex;
-	place-items: center;
-	gap: 1.875rem; 
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1.5rem; 
 	text-align: center;
 }
 .contact form .input-box input,
@@ -377,6 +373,9 @@ section {
 	margin: 0.875rem 0; 
 	resize: none;
 	transition: 0.3s ease-in-out;
+}
+.contact form textarea  {
+	height: 300px;
 }
 .contact form .input-box input:focus,
 .contact form textarea:focus {

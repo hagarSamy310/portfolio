@@ -79,8 +79,8 @@ window.onscroll = () => {
 // Download CV 
 downloadCvBtn.addEventListener('click', () => {
     const link = document.createElement('a');
-    link.href = './Hagar-Samy-Frontend-Dev-CV.pdf'; 
-    link.download = 'Hagar-Samy-Frontend-Dev-CV.pdf';
+    link.href = './Hagar Samy-Frontend-CV.pdf'; 
+    link.download = 'Hagar Samy-Frontend-CV.pdf';
     
     document.body.appendChild(link);
     link.click();
