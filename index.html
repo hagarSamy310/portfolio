@@ -174,7 +174,7 @@
 					</div>
 					<div class="project-card" data-aos="zoom-in" data-aos-delay="300">
 						<img
-							src="Images/Screenshot-portfolio.jpeg"
+							src="Images/portfolio screen.png"
 							alt="My Portfolio"
 							style="object-position: right"
 						/>
@@ -201,7 +201,8 @@
 				<h3 class="heading" data-aos="zoom-in" data-aos-delay="100">
 					Contact <span>Me</span>
 				</h3>
-				<form id="contactForm">
+				<form id="contactForm" novalidate>
+					<p class="feedback"></p>
 					<div class="input-group">
 						<div class="input-box">
 							<label for="fullName" class="visually-hidden">Full Name</label>
@@ -273,6 +274,17 @@
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
 			AOS.init();
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "IFA3vmU_y-6XCu1AX",
+				});
+			})();
 		</script>
 		<script src="script.js"></script>
 	</body>

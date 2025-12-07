@@ -16,8 +16,8 @@
 
 :root {
 	/* Colors */
-	--bg-color: #020524;
-	--header-color: #0000004d;
+	--bg-color: rgb(15, 23, 42);
+	--header-color: #0000002a;
 	--text-color: #fff;
 	--main-color: #78c9fb;
 
@@ -468,6 +468,7 @@ section {
 	align-items: center;
 	gap: 0.625rem;
 	text-align: center;
+	position: relative;
 }
 
 .contact form .input-group,
@@ -509,6 +510,14 @@ section {
 	box-shadow: 0 0 0.9375rem #ff4d4d !important;
 }
 
+.feedback {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: #ff4d4d;
+	position: absolute;
+	top: -90px;
+	opacity: 0;
+}
 /* Footer */
 .footer {
 	padding: 4rem 0 2rem 0;
@@ -694,6 +703,12 @@ section {
 	.contact form .input-box input,
 	.contact form textarea {
 		padding: 1.5625rem;
+	}
+
+	.feedback {
+		top: -22px;
+		font-size: 1rem;
+		left: 10px;
 	}
 }
 
