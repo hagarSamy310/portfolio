@@ -21,12 +21,6 @@ A clean, modern, and fully responsive portfolio website showcasing my frontend d
 - **JavaScript** - Form validation, smooth scrolling, mobile menu toggle
 - **AOS Library** - Scroll animations
 
-## 📊 Performance
-
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Load Time**: < 2 seconds on 3G
-- **Mobile-Friendly**: Passes Google Mobile-Friendly Test
-
 ## Acknowledgments
 
 - **AOS Library** - [Animate On Scroll](https://michalsnik.github.io/aos/)
