@@ -37,6 +37,10 @@ body {
 	line-height: 1.5;
 }
 
+img {
+	display: block;
+}
+
 [data-aos] {
 	overflow: visible !important;
 }
