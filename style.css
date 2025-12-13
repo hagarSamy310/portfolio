@@ -27,7 +27,8 @@
 	--font-logo: clamp(1.2rem, 1.2rem + 1vw, 2rem);
 }
 
-html, body {
+html,
+body {
 	overflow-x: hidden;
 	max-width: 100%;
 }
@@ -48,20 +49,6 @@ img {
 
 h3 {
 	white-space: nowrap;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-	width: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: var(--main-color);
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: rgba(13, 16, 64, 0.552);
 }
 
 /* Header */
@@ -573,6 +560,19 @@ section {
 }
 
 @media (min-width: 769px) {
+	/* Scrollbar */
+	::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--main-color);
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: rgba(13, 16, 64, 0.552);
+	}
 	.header {
 		padding: 0rem 2rem;
 	}
