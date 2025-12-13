@@ -27,8 +27,9 @@
 	--font-logo: clamp(1.2rem, 1.2rem + 1vw, 2rem);
 }
 
-html {
+html, body {
 	overflow-x: hidden;
+	/* max-width: 100%; */
 }
 
 body {
@@ -66,7 +67,7 @@ h3 {
 /* Header */
 .header {
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	top: 0;
 	left: 0;
 	padding: 0.8rem 1.2rem;
