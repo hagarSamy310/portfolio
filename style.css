@@ -303,8 +303,7 @@ section {
 }
 
 .about-img img {
-	width: 100%;
-	max-width: 80%;
+	max-width: 70vw;
 	height: auto;
 	object-fit: cover;
 	animation: floatImage 4s ease-in-out infinite;
