@@ -298,8 +298,13 @@ section {
 	gap: 1rem;
 }
 
+.about-img {
+	overflow: hidden;
+}
+
 .about-img img {
-	width: 80%;
+	width: 100%;
+	max-width: 80%;
 	height: auto;
 	object-fit: cover;
 	animation: floatImage 4s ease-in-out infinite;
