@@ -131,7 +131,7 @@ window.onscroll = () => {
 // Download CV
 downloadCvBtn.addEventListener("click", () => {
   const link = document.createElement("a");
-  link.href = "./HagarSamy - FrontendDeveloper- CV.pdf";
+  link.href = "./HagarSamy-FrontendDev-CV.pdf";
   link.download = "HagarSamy-FrontendDeveloper-CV.pdf";
 
   document.body.appendChild(link);
