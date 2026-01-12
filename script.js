@@ -10,17 +10,17 @@ const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 // Mobile Menu Toggle
 menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
+	menuIcon.classList.toggle("bx-x");
+	navbar.classList.toggle("active");
 };
 
 navLinks.forEach((link) => {
-  link.onclick = () => {
-    if (navbar.classList.contains("active")) {
-      menuIcon.classList.remove("bx-x");
-      navbar.classList.remove("active");
-    }
-  };
+	link.onclick = () => {
+		if (navbar.classList.contains("active")) {
+			menuIcon.classList.remove("bx-x");
+			navbar.classList.remove("active");
+		}
+	};
 });
 
 // Contact Form Validation
@@ -31,111 +31,116 @@ const feedbackMessage = document.querySelector(".feedback");
 const requiredInputs = [name, email, message];
 
 function setError(input, msg) {
-  input.classList.add("input-error");
-  feedbackMessage.style.opacity = "1";
-  feedbackMessage.textContent = msg;
+	input.classList.add("input-error");
+	feedbackMessage.style.opacity = "1";
+	feedbackMessage.textContent = msg;
 }
 
 function removeError(input) {
-  input.classList.remove("input-error");
-  feedbackMessage.style.opacity = "0"; 
+	input.classList.remove("input-error");
+	feedbackMessage.style.opacity = "0";
 }
 
 function clearFormInputs() {
-    requiredInputs.forEach(input => {
-        input.value = '';
-    });
-		document.getElementById('phoneNumber').value = '';
+	requiredInputs.forEach((input) => {
+		input.value = "";
+	});
+	document.getElementById("phoneNumber").value = "";
 }
 
 function validatName() {
-  return name.value.trim().length >= 3;
+	return name.value.trim().length >= 3;
 }
 
 function validateEmail() {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(email.value.trim());
+	const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+	return emailRegex.test(email.value.trim());
 }
 
 function validateMessage() {
-  return message.value.trim().length >= 10;
+	return message.value.trim().length >= 10;
 }
 
 // Removing error style when user is typing
-requiredInputs.forEach((input) => { 
-  input.addEventListener("input", () => removeError(input));
+requiredInputs.forEach((input) => {
+	input.addEventListener("input", () => removeError(input));
 });
 
 contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+	e.preventDefault();
 
-  // Reset
-  requiredInputs.forEach(input => removeError(input)); 
+	// Reset
+	requiredInputs.forEach((input) => removeError(input));
 
-  if (!validatName()) {
-    setError(name, "Please enter a valid name");
-    name.focus();
-    return;
-  } else if (!validateEmail()) {
-    setError(email, "Please enter a valid email");
-    email.focus();
-    return;
-  } else if (!validateMessage()) {
-    setError(message, "Please write your message (min 10 characters)");
-    message.focus();
-    return;
-  }
-  
-  // Sending to my gmail via Email.js
-  const serviceID = "service_6evxnbr";
-  const templateID = "template_a858wlm";
+	if (!validatName()) {
+		setError(name, "Please enter a valid name");
+		name.focus();
+		return;
+	} else if (!validateEmail()) {
+		setError(email, "Please enter a valid email");
+		email.focus();
+		return;
+	} else if (!validateMessage()) {
+		setError(message, "Please write your message (min 10 characters)");
+		message.focus();
+		return;
+	}
 
-  emailjs.sendForm(serviceID, templateID, contactForm).then(
-    () => {
-      console.log("SUCCESS!");
-      
-      feedbackMessage.style.opacity = '1';
-      feedbackMessage.textContent = 'Message sent successfully ✔';
-      feedbackMessage.style.color = 'rgb(20, 104, 66)';
-      
-      clearFormInputs(); 
+	// Sending to my gmail via Email.js
+	const serviceID = "service_6evxnbr";
+	const templateID = "template_a858wlm";
 
-      setTimeout(() => {
-        feedbackMessage.style.opacity = '0';
-      }, 3000); 
+	emailjs.sendForm(serviceID, templateID, contactForm).then(
+		() => {
+			console.log("SUCCESS!");
 
-    },
-    (error) => {
-      console.log("FAILED...", error);
-      setError(name, 'Something went wrong, please check your network or try again!');
-      
-      setTimeout(() => {
-        feedbackMessage.style.opacity = '0';
-      }, 5000); 
-    }
-  );
-  });
+			feedbackMessage.style.opacity = "1";
+			feedbackMessage.textContent = "Message sent successfully ✔";
+			feedbackMessage.style.color = "rgb(20, 104, 66)";
+
+			clearFormInputs();
+
+			setTimeout(() => {
+				feedbackMessage.style.opacity = "0";
+			}, 3000);
+		},
+		(error) => {
+			console.log("FAILED...", error);
+			setError(
+				name,
+				"Something went wrong, please check your network or try again!"
+			);
+
+			setTimeout(() => {
+				feedbackMessage.style.opacity = "0";
+			}, 5000);
+		}
+	);
+});
 
 // Scroll to Top Button
 window.onscroll = () => {
-  if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
-  ) {
-    scrollToTopBtn.style.display = "flex";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
+	if (
+		document.body.scrollTop > 500 ||
+		document.documentElement.scrollTop > 500
+	) {
+		scrollToTopBtn.style.display = "flex";
+	} else {
+		scrollToTopBtn.style.display = "none";
+	}
 };
 
 // Download CV
 downloadCvBtn.addEventListener("click", () => {
-  const link = document.createElement("a");
-  link.href = "./HagarSamy-FrontendDev-CV.pdf";
-  link.download = "HagarSamy-FrontendDeveloper-CV.pdf";
+	const link = document.createElement("a");
+	link.href = "./HagarSamy-FrontendDev-CV.pdf";
+	link.download = "HagarSamy-FrontendDeveloper-CV.pdf";
 
-  document.body.appendChild(link);
-  link.click();
+	document.body.appendChild(link);
+	link.click();
 
-  document.body.removeChild(link);
+	document.body.removeChild(link);
 });
+
+// Current year in footer
+document.querySelector(".copyright").textContent = "© " + new Date().getFullYear() + " | All Rights Reserved.";
