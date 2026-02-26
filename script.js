@@ -94,14 +94,15 @@ contactForm.addEventListener("submit", (e) => {
 		() => {
 			console.log("SUCCESS!");
 
+			feedbackMessage.classList.add('success');
 			feedbackMessage.style.opacity = "1";
 			feedbackMessage.textContent = "Message sent successfully ✔";
-			feedbackMessage.style.color = "#4ade80";
 
 			clearFormInputs();
 
 			setTimeout(() => {
 				feedbackMessage.style.opacity = "0";
+			feedbackMessage.classList.remove('success');
 			}, 3000);
 		},
 		(error) => {

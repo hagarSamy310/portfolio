@@ -526,6 +526,10 @@ section {
 	top: -90px;
 	opacity: 0;
 }
+
+.feedback .success {
+	color: #4ade80;
+}
 /* Footer */
 .footer {
 	padding: 4rem 0 2rem 0;
