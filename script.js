@@ -94,7 +94,7 @@ contactForm.addEventListener("submit", (e) => {
 		() => {
 			console.log("SUCCESS!");
 
-			feedbackMessage.classList.add('success');
+			feedbackMessage.classList.add("success");
 			feedbackMessage.style.opacity = "1";
 			feedbackMessage.textContent = "Message sent successfully ✔";
 
@@ -102,20 +102,20 @@ contactForm.addEventListener("submit", (e) => {
 
 			setTimeout(() => {
 				feedbackMessage.style.opacity = "0";
-			feedbackMessage.classList.remove('success');
+				feedbackMessage.classList.remove("success");
 			}, 3000);
 		},
 		(error) => {
 			console.log("FAILED...", error);
 			setError(
 				name,
-				"Something went wrong, please check your network or try again!"
+				"Something went wrong, please check your network or try again!",
 			);
 
 			setTimeout(() => {
 				feedbackMessage.style.opacity = "0";
 			}, 5000);
-		}
+		},
 	);
 });
 
@@ -144,4 +144,5 @@ downloadCvBtn.addEventListener("click", () => {
 });
 
 // Current year in footer
-document.querySelector(".copyright").textContent = "© " + new Date().getFullYear() + " | All Rights Reserved.";
+document.querySelector(".copyright").textContent =
+	"© " + new Date().getFullYear() + " | All Rights Reserved.";

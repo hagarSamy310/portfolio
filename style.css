@@ -527,7 +527,7 @@ section {
 	opacity: 0;
 }
 
-.feedback .success {
+.feedback.success {
 	color: #4ade80;
 }
 /* Footer */
