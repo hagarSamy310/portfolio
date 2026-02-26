@@ -96,7 +96,7 @@ contactForm.addEventListener("submit", (e) => {
 
 			feedbackMessage.style.opacity = "1";
 			feedbackMessage.textContent = "Message sent successfully ✔";
-			feedbackMessage.style.color = "rgb(20, 104, 66)";
+			feedbackMessage.style.color = "#4ade80";
 
 			clearFormInputs();
 
