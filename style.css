@@ -49,32 +49,32 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: -100vh;
+	bottom: 0;
 	z-index: -1;
 }
 
 #stars {
 	background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><circle cx="20" cy="20" r="1" fill="white" opacity="0.8"/><circle cx="150" cy="80" r="1.5" fill="white" opacity="0.6"/><circle cx="300" cy="150" r="1" fill="white" opacity="0.9"/><circle cx="50" cy="250" r="2" fill="white" opacity="0.4"/><circle cx="200" cy="350" r="1.5" fill="white" opacity="0.7"/><circle cx="350" cy="50" r="1" fill="white" opacity="0.5"/></svg>') repeat;
-	animation: starsAnimation 20s linear infinite;
+	animation: starsAnimation 50s linear infinite;
 }
 
 #stars2 {
 	background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><circle cx="100" cy="100" r="1.5" fill="white" opacity="0.8"/><circle cx="400" cy="200" r="2" fill="white" opacity="0.5"/><circle cx="500" cy="500" r="1" fill="white" opacity="0.9"/><circle cx="200" cy="400" r="2.5" fill="white" opacity="0.3"/><circle cx="50" cy="550" r="1.5" fill="white" opacity="0.7"/></svg>') repeat;
-	animation: starsAnimation 25s linear infinite;
+	animation: starsAnimation 75s linear infinite;
 }
 
 #stars3 {
 	background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800"><circle cx="300" cy="300" r="2" fill="white" opacity="0.9"/><circle cx="600" cy="100" r="1" fill="white" opacity="0.4"/><circle cx="100" cy="700" r="2.5" fill="white" opacity="0.6"/><circle cx="700" cy="600" r="1.5" fill="white" opacity="0.8"/></svg>') repeat;
-	animation: starsAnimation 30s linear infinite;
+	animation: starsAnimation 100s linear infinite;
 }
 
 @keyframes starsAnimation {
 	from {
-		transform: translateY(0);
+		background-position: 0 0;
 	}
 
 	to {
-		transform: translateY(-50vh);
+		background-position: 0 -1000px;
 	}
 }
 
@@ -106,6 +106,8 @@ h3 {
 	width: 100vw;
 	top: 0;
 	left: 0;
+	padding: 0.5rem 1.2rem;
+	height: fit-content;
 	background: var(--color-header);
 	backdrop-filter: blur(10px);
 	display: flex;
@@ -385,9 +387,6 @@ section {
 	white-space: nowrap;
 	padding: 2rem 0;
 	position: relative;
-	/* Fade effect on the edges */
-	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .skills-track {
@@ -679,7 +678,7 @@ section {
 	}
 
 	.header {
-		padding: 0rem 2rem;
+		padding: 0.1rem 2rem;
 	}
 
 	#menu-icon {
@@ -763,6 +762,9 @@ section {
 
 	.skills-marquee {
 		padding: 4rem 0;
+		/* Fade effect on the edges only for larger screens where it is safe */
+		-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+		mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 	}
 
 	.skill-item {
