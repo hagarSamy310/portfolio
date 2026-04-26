@@ -106,7 +106,7 @@ h3 {
 	width: 100vw;
 	top: 0;
 	left: 0;
-	padding: 0.1rem 2rem;
+	padding: 0.4rem 0.5rem;
 	background: var(--color-header);
 	backdrop-filter: blur(10px);
 	display: flex;
@@ -118,14 +118,16 @@ h3 {
 .header-controls {
 	display: flex;
 	align-items: center;
-	gap: 1.5rem;
+	justify-content: space-between;
 }
+
 
 #menu-icon {
 	font-size: 2rem;
 	color: var(--color-accent);
 	display: block;
 	z-index: 1000;
+	margin-block-start: auto;
 }
 
 .logo {
@@ -680,6 +682,9 @@ section {
 		display: none;
 	}
 
+	.header {
+		padding: 0.2rem 2rem;
+	}
 	.navbar {
 		position: static;
 		flex-grow: 1;
