@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Hagar Samy | Frontend Developer</title>
+		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230891b2' d='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'/></svg>" />
 
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link
@@ -11,13 +12,16 @@
 			rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
 		<header class="header">
 			<a href="#home" class="logo">Hagar <span>Samy</span></a>
 
@@ -41,7 +45,7 @@
 			<!-- HOME -->
 			<section class="home" id="home">
 				<div class="home-content" data-aos="fade-right" data-aos-duration="1000">
-					<h1>Frontend Developer</h1>
+					<h1><span class="live-dot"></span> Frontend Developer</h1>
 					<h2>
 						Always <span>creating</span>,<br />
 						always <span>improving</span>
@@ -104,31 +108,84 @@
 
 			<!-- SKILLS -->
 			<section class="skills" id="skills">
-				<h3 class="heading" data-aos="fade-down">My <span>Skills</span></h3>
+				<h3 class="heading" data-aos="fade-down"><span>Skills</span> & Tools</h3>
 
-				<div class="skills-container">
-					<div class="skill-box" data-aos="zoom-in" data-aos-delay="100">
-						<i class="bx bxl-html5"></i>
-						<h4>HTML5</h4>
-					</div>
-
-					<div class="skill-box" data-aos="zoom-in" data-aos-delay="200">
-						<i class="bx bxl-css3"></i>
-						<h4>CSS3</h4>
-					</div>
-
-					<div class="skill-box" data-aos="zoom-in" data-aos-delay="300">
-						<i class="bx bxl-javascript"></i>
-						<h4>JavaScript</h4>
-					</div>
-
-					<div class="skill-box" data-aos="zoom-in" data-aos-delay="400">
-						<i class="bx bxl-react"></i>
-						<h4>React</h4>
-					</div>
-					<div class="skill-box" data-aos="zoom-in" data-aos-delay="500">
-						<i class="bx bxl-tailwind-css"></i>
-						<h4>Tailwind</h4>
+				<div class="skills-marquee" data-aos="fade-up" data-aos-delay="200">
+					<div class="skills-track">
+						<div class="skill-item">
+							<i class="bx bxl-html5" style="color: #E34F26;"></i>
+							<h4>HTML5</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-css3" style="color: #1572B6;"></i>
+							<h4>CSS3</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-tailwind-css" style="color: #38B2AC;"></i>
+							<h4>Tailwind</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-javascript" style="color: #F7DF1E;"></i>
+							<h4>JavaScript</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-react" style="color: #61DAFB;"></i>
+							<h4>React</h4>
+						</div>
+						<div class="skill-item">
+							<img src="https://cdn.simpleicons.org/reactrouter/CA4245" width="48" height="48" alt="React Router" />
+							<h4>React Router</h4>
+						</div>
+						<div class="skill-item">
+							<img src="https://cdn.simpleicons.org/vite/646CFF" width="48" height="48" alt="Vite" />
+							<h4>Vite</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-git" style="color: #F05032;"></i>
+							<h4>Git</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-github" style="color: #ffffff;"></i>
+							<h4>GitHub</h4>
+						</div>
+						
+						<!-- Duplicated items for seamless infinite scroll -->
+						<div class="skill-item">
+							<i class="bx bxl-html5" style="color: #E34F26;"></i>
+							<h4>HTML5</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-css3" style="color: #1572B6;"></i>
+							<h4>CSS3</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-tailwind-css" style="color: #38B2AC;"></i>
+							<h4>Tailwind</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-javascript" style="color: #F7DF1E;"></i>
+							<h4>JavaScript</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-react" style="color: #61DAFB;"></i>
+							<h4>React</h4>
+						</div>
+						<div class="skill-item">
+							<img src="https://cdn.simpleicons.org/reactrouter/CA4245" width="48" height="48" alt="React Router" />
+							<h4>React Router</h4>
+						</div>
+						<div class="skill-item">
+							<img src="https://cdn.simpleicons.org/vite/646CFF" width="48" height="48" alt="Vite" />
+							<h4>Vite</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-git" style="color: #F05032;"></i>
+							<h4>Git</h4>
+						</div>
+						<div class="skill-item">
+							<i class="bx bxl-github" style="color: #ffffff;"></i>
+							<h4>GitHub</h4>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -150,7 +207,7 @@
 						<div class="tech-stack">
 							<i class="bx bxl-react"></i>
 							<i class="bx bxl-css3"></i>
-							<i class="bx bx-bot"></i>
+							<i class="bx bxs-bot"></i>
 						</div>
 						<div class="project-links">
 							<a
@@ -173,11 +230,12 @@
 							src="Images/paletteScreen.jpeg"
 							alt="Palette Generator"
 						/>
-						<h3>Palette Generator</h3>
+						<h3>AI Palette Generator</h3>
 						<div class="tech-stack">
 							<i class="bx bxl-html5"></i>
 							<i class="bx bxl-css3"></i>
 							<i class="bx bxl-javascript"></i>
+							<i class="bx bxs-bot"></i>
 							<i class="bx bx-server"></i>
 						</div>
 						<div class="project-links">
