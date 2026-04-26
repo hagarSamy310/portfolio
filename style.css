@@ -677,10 +677,6 @@ section {
 		background-color: rgba(13, 16, 64, 0.552);
 	}
 
-	.header {
-		padding: 0.1rem 2rem;
-	}
-
 	#menu-icon {
 		display: none;
 	}
