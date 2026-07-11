@@ -2,7 +2,7 @@
 
 A clean, modern, and fully responsive portfolio website showcasing my frontend development skills and projects.
 
-![Portfolio Preview](Images/portfolio%20screen.png)
+![Portfolio Preview](Images/paletteScreen.jpeg)
 
 ## ✨ Features
 
